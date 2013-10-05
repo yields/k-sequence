@@ -1,0 +1,18 @@
+{
+  "name": "k-sequence",
+  "repo": "yields/k-sequence",
+  "description": "keyboard sequences.",
+  "keywords": ["k", "sequence", "gmail", "keyboard"],
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": ["index.js"],
+  "remotes": [],
+  "dependencies": {
+    "yields/keycode": "*"
+  },
+  "development": {
+    "component/assert": "*",
+    "visionmedia/mocha": "*"
+  }
+}

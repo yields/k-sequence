@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>k-sequence</title>
+  <script src='build/build.js'></script>
+  <style>
+    body {
+      padding: 80px;
+    }
+    h1 {
+      font: 200 18px/1.6 'Helvetica Neue';
+    }
+  </style>
+</head>
+<body>
+
+  <h1>press "a b c" within 500ms</h1>
+  <script>
+    var seq = require('k-sequence');
+    window.addEventListener('keydown', seq('a b c', function(e){
+      e.preventDefault();
+      console.log('called !');
+    }));
+  </script>
+
+</body>
+</html>
