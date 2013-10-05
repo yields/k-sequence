@@ -19,7 +19,7 @@ and defaulted to `500ms`.
 
 ```js
 var fn = seq('a b c', function(e){
-  console.log('called only if "a b c" where pressed within 500ms');
+  console.log('called only if "a b c" were pressed within 500ms');
 });
 
 el.addEventListener('keydown', fn);
