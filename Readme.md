@@ -23,7 +23,8 @@ the callback to be called.
 ```js
 var a = seq('a b c', function(e){});
 var b = seq('a * b * c', function(e){});
-el.addEventListener('keydown', fn);
+el.addEventListener('keydown', a);
+el.addEventListener('keydown', b);
 
 press('a b c'); // => a is called
 press('a a b b c'); // => b is called
