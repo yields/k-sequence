@@ -14,7 +14,7 @@ module.exports = sequence;
 /**
  * Create sequence fn with `keys`.
  * optional `ms` which defaults
- * to `100` and `fn`.
+ * to `500ms` and `fn`.
  *
  * Example:
  *
@@ -41,7 +41,8 @@ function sequence(keys, ms, fn){
   }
 
   return function(e){
-    if (codes[i++] != e.which) return reset();
+    var code = codes[i++];
+    if (42 != code && code != e.which) return reset();
     if (prev && new Date - prev > ms) return reset();
     var len = seq.push(e.which);
     prev = new Date;

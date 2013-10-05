@@ -17,12 +17,16 @@ Create a function that will be invoked only if
 the given `keys` sequence is matched, `ms` can be omitted
 and defaulted to `500ms`.
 
-```js
-var fn = seq('a b c', function(e){
-  console.log('called only if "a b c" were pressed within 500ms');
-});
+if `ms` is `500ms` the keys must be pressed within `500ms` for
+the callback to be called.
 
+```js
+var a = seq('a b c', function(e){});
+var b = seq('a * b * c', function(e){});
 el.addEventListener('keydown', fn);
+
+press('a b c'); // => a is called
+press('a a b b c'); // => b is called
 ```
 
 ## Tests

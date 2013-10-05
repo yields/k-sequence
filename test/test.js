@@ -181,6 +181,50 @@ describe('k-sequence', function(){
     })
   })
 
+  describe('("a * b * c")', function(){
+    describe('press("a f b d c")', function(){
+      it('should work', function(){
+        var calls = counter();
+        var fn = seq('a * b * c', calls);
+        el.addEventListener('keydown', fn);
+        press('a');
+        press('f');
+        press('b');
+        press('d');
+        press('c');
+        assert(1 == calls());
+      })
+    })
+
+    describe('press("a a b b c")', function(){
+      it('should work', function(){
+        var calls = counter();
+        var fn = seq('a * b * c', calls);
+        el.addEventListener('keydown', fn);
+        press('a');
+        press('a');
+        press('b');
+        press('b');
+        press('c');
+        assert(1 == calls());
+      })
+    })
+
+    describe('press("a a a b c")', function(){
+      it('should not work', function(){
+        var calls = counter();
+        var fn = seq('a * b * c', calls);
+        el.addEventListener('keydown', fn);
+        press('a');
+        press('a');
+        press('a');
+        press('b');
+        press('c');
+        assert(0 == calls());
+      })
+    })
+  })
+
   function counter(){
     var calls = 0;
     return function(){
