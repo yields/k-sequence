@@ -16,5 +16,9 @@
       "k-sequence/index.js": "index.js"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yields/k-sequence.git"
+  },
   "license": "MIT"
 }
