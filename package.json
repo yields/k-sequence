@@ -1,0 +1,20 @@
+{
+  "name": "yields-k-sequence",
+  "description": "keyboard sequences",
+  "author": "Amir Abu Shareb <yields@icloud.com>",
+  "version": "0.1.0",
+  "main": "index.js",
+  "keywords": ["k", "sequence", "gmail", "keyboard"],
+  "dependencies": {
+    "yields-keycode": "*"
+  },
+  "browser": {
+    "keycode": "yields-keycode"
+  },
+  "component": {
+    "scripts": {
+      "k-sequence/index.js": "index.js"
+    }
+  },
+  "license": "MIT"
+}
